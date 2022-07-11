@@ -1,0 +1,62 @@
+@import "../../asset/mixins/_mixins";
+@import '../../asset/scss/variables.scss';
+
+.signin {
+    @include flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px 50px;
+
+    .form {
+        width: 100%;
+    }
+    svg {
+        margin: 0;
+        width: 80%;
+    }
+}
+
+#createone {
+    font-weight: 200;
+    text-align: center;
+    color: $primary;
+    margin-top: 10px;
+
+    span {
+        color: $primary;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+#forgottenpassword {
+    margin-top: 0;
+    margin-bottom: 30px; 
+    text-align: right;
+    cursor: pointer; 
+    color: $primary; 
+    font-weight: 500;
+}
+
+
+@media (min-width: 769px) {
+    .signin {
+        padding: 10px 450px;
+        svg {
+            width: 60%;
+        }
+    }
+}
+
+@media (min-width: 1399px) {
+    .signin {
+        padding: 10px 650px;
+    
+        .form {
+            width: 100%;
+        }
+        svg {
+            margin: 0;
+            width: 60%;
+        }
+    }  
+}

@@ -1,0 +1,52 @@
+@import "../../asset/mixins/_mixins";
+@import '../../asset/scss/variables.scss';
+.signup {
+    @include flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px 50px;
+
+    .form {
+        width: 100%;
+    }
+    svg {
+        margin: 0;
+        width: 80%;
+    }
+}
+#login {
+    font-weight: 200;
+    text-align: center;
+    color: $primary;
+    margin-top: 10px;
+
+    span {
+        color: $primary;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .signup {
+        padding: 10px 450px;
+        svg {
+            width: 60%;
+        }
+    }
+}
+
+@media (min-width: 1399px) {
+    .signup {
+        padding: 10px 650px;
+    
+        .form {
+            width: 100%;
+        }
+        svg {
+            margin: 0;
+            width: 60%;
+        }
+    }  
+}

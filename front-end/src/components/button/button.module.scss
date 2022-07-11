@@ -1,0 +1,48 @@
+@import '../../asset/scss/variables.scss';
+
+.btn {
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+    background: $primary;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    padding: 1rem;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-clear {
+    font-weight: 300;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 40px;
+    background: $pure-white;
+    border: 1px solid $primary;
+    border-radius: 3px;
+    color: #000;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.danger {
+    background: $danger;
+}
+.btn:focus,.btn-clear {
+    outline: none;
+}
+.btn:hover {
+    // background-color: $active-link;
+    transition: all 1s;
+}
+.icon svg {
+    height: 25px;
+}
+.icon {
+    width: 20%;
+}

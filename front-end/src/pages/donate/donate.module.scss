@@ -1,0 +1,46 @@
+@import "../../asset/mixins/_mixins";
+@import '../../asset/scss/variables.scss';
+
+.donate {
+    display:  flex;
+    flex-direction: column;
+
+    h5 {
+        margin-bottom: 30px;
+    }
+    #donation {
+        flex: 0.30;
+    }
+    #payment {
+        flex: 0.70;
+    }
+
+    .bottom {
+        display: flex;
+
+        #cvc {
+            flex: 0.9;
+        }
+        #expiry {
+            flex: 0.1;
+        }
+    }
+    .icons {
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 769px) {
+    .donate {
+        flex-direction: row;
+
+
+        #donation {
+            flex: 0.40;
+        }
+        #payment {
+            flex: 0.60;
+        }
+    }
+}
+  

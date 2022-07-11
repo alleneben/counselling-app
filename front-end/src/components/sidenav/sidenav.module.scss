@@ -1,0 +1,264 @@
+@import '../../asset/scss/variables.scss';
+// .sidenav {
+//     position: fixed;
+//     left:-250px;
+//     width: 250px;
+//     width: 300px;
+//     height: 100%;
+//     background: $primary;
+//     transition: all .5s ease;
+
+//     header {
+//         font-size: 22px;
+//         color: white;
+//         text-align: center;
+//         line-height: 50px;
+//         background: $primary;
+//         user-select: none;
+//     }
+//     svg {
+//         width: 80%;
+//     }
+
+//     ul a {
+//         display: block;
+//         height: 100%;
+//         width: 100%;
+//         line-height: 50px;
+//         font-size: 14px;
+//         color: white;
+//         padding-left: 40px;
+//         box-sizing: border-box;
+//         border-top: 0px solid rgba(255,255,255,.1);
+//         // border-bottom: 1px solid black;
+//         // transition: .4s;
+//     }
+
+
+//     ul li:hover a {
+//         // padding-left: 50px;
+//         background-color: rgba(255,255,255,.1);
+//         color: white;
+//     }
+
+// }
+
+// #check {
+//     display: none;
+// }
+// #btn, #cancel {
+//     position: absolute;
+//     cursor: pointer;
+//     background: $primary;
+//     border-radius: 3px; 
+// }
+// label {
+//     position: sticky;
+//     left: 0;
+//     top: 0;
+//     z-index: 5;
+// }
+// label #btn {
+//     z-index: 1;
+//     left: 40px;
+//     top: 12px;
+//     font-size: 35px;
+//     color: white;
+//     padding: 6px 12px;
+//     transition: all .5s;
+// }
+
+// label #cancel {
+//     z-index: 1;
+//     left: -195px;
+//     top: 10px;
+//     font-size: 30px;
+//     color: #0a5275;
+//     padding: 4px 9px;
+//     transition: all .5s;
+// }
+
+// #check:checked ~ .sidenav {
+//     left: 0;
+// }
+
+// #check:checked ~ label #btn {
+//     left: 250px;
+//     opacity: 0;
+//     pointer-events: none;
+// }
+// #check:checked ~ label #cancel {
+//     left: 195px;
+// }
+// #check:checked ~ main {
+//     margin-left: 250px;
+// }
+
+// #check:checked ~ nav {
+//     margin-left: 250px;
+//     padding-left: 10px;
+// }
+
+// .sidenav {
+//     left: 0;
+// }
+
+// main {
+//     margin-left: 300px;
+// }
+
+// nav {
+//     margin-left: 300px;
+//     padding-left: 10px;
+// }
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: #11101d;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+.sidebar.active{
+    width: 240px;
+}
+
+.sidebar .logoContent .logo {
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .logoContent .logo {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.logoContent i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+.logoContent .logo .logoName {
+    font-size: 20px;
+    font-weight: 400;
+}
+// .sidebar #menubtn {
+//     position: absolute;
+//     color: #fff;
+//     left: 90%;
+//     top: 6px;
+//     left: 50%;
+//     font-size: 20px;
+//     height: 50px;
+//     width: 50px;
+//     text-align: center;
+//     line-height: 50px;
+//     transform: translateX(-50%);
+// }
+// .sidebar.active #menubtn {
+//     left: 90%;
+// }
+.sidebar ul {
+    margin-top: 20px;
+}
+.sidebar ul li{
+    position: relative;
+    height: 50%;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+}
+
+.sidebar ul li input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #1d1b31;
+    padding-left: 50px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.sidebar ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+}
+.sidebar ul li a:hover{
+    color: #11101d;
+    background: #fff;
+}
+.sidebar ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.sidebar .linksName {
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .linksName {
+    opacity: 1;
+    pointer-events: none;
+}
+.sidebar .profileContent {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.sidebar .profileContent .profile {
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: #1d1b31;
+}
+.profileContent .profile .profileDetails {
+    display: flex;
+    align-items: center;
+}
+.profile .profileDetails img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.profile .profileDetails .nameJob{
+    margin-left: 10px;
+}
+.profile .profileDetails .name{
+    font-size: 15px;
+    font-weight: 400;
+}
+.profile .profileDetails .job{
+    font-size: 12px;
+}
+.profile #logOut {
+    position: absolute;
+    left: 88%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+}
